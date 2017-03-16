@@ -1,0 +1,222 @@
+@import "reset"
+@import "fonts"
+@import "libs"
+@import "vars"
+*
+	box-sizing: border-box
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+.clearfix:after 
+	content: ""
+	display: table
+	clear: both
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	opacity: 1
+	color: $mainColor
+	overflow: visible 
+.wrapper
+	width: 97%
+	max-width: 1170px
+	margin: 0 auto
+	position: relative
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+.header
+	position: absolute
+	left: 50%
+	width: 97%
+	max-width: 1170px
+	top: 0
+	transform: translate(-50%,0)
+	padding-top: 50px
+	overflow: hidden
+	z-index: 10
+.header-logo
+	float: left
+	font-family: $Bold-font
+	font-size: 18px
+	text-transform: uppercase
+.header-nav
+	float: right
+.header-nav__list
+	li
+		display: inline-block
+		margin-right: 12px
+		&:last-child
+			margin-right: 0
+	a
+		color: $mainColor
+		font-family: "$Bold-font"
+		text-transform: uppercase
+		text-decoration: none
+		font-size: 16px
+section
+	position: relative
+	padding: 90px 0px
+.top-bg
+	background: url(../img/temp.jpg) no-repeat center
+	background-size: cover
+	padding: 0
+	.wrapper
+		min-height: 920px
+.top-banner__info
+	position: absolute
+	right: 0
+	width: 100%
+	max-width: 570px
+	text-align: right
+	top: 40%
+	z-index: 10
+.top-banner__title
+	position: relative
+	display: block
+	margin-bottom: 75px
+	font-family: $Bold-font
+	font-size: 72px
+	text-transform: uppercase
+	&::after
+		content: ''
+		display: block
+		width: 140px
+		height: 4px
+		position: absolute
+		background-color: #000
+		right: 0
+		bottom: -30px
+.top-banner__text
+	font-size: 18px
+	line-height: 34px
+	margin-bottom: 65px
+.g-btn
+	color: $mainColor
+	display: inline-block
+	width: 100%
+	max-width: 270px
+	height: 50px
+	line-height: 50px
+	border: 2px solid $borderColor
+	text-align: center
+	font-size: 18px
+	font-family: $Bold-font
+.who-and-why
+	.section-title
+		&::before
+			content: ''
+			display: block
+			width: 40px
+			height: 40px
+			margin: 0 auto 10px
+			background: url(../img/spritesheet.png)
+			background-position: -15px -15px
+.section-title
+	position: relative
+	font-size: 27px
+	display: block
+	font-family: $Bold-font
+	text-align: center
+	margin-bottom: 55px
+.section-text--big
+	font-size: 16px
+	line-height: 33px
+	text-align: center
+	width: 100%
+	max-width: 970px
+	margin: 0 auto
+.gray-bg
+	background-color: $grayBgColor
+.advantages
+	text-align: center
+.advantages-item
+	display: inline-block
+	vertical-align: top
+	width: 25%
+	position: relative
+	margin: 0 3% 0
+	padding-top: 60px
+	text-align: left
+.advantages-icon
+	display: block
+	position: absolute
+	left: 0
+	top: 0px
+	margin-bottom: 25px
+.advantages-title
+	display: block
+	font-family: $Bold-font
+	font-size: 18px
+	margin-bottom: 20px
+.section-text--small
+	font-size: 16px
+	line-height: 26px
+.featured
+	.bx-wrapper
+		box-shadow: none
+		.bx-viewport
+			box-shadow: none
+			left: 0
+			border: 0
+			background: none
+.featured
+	.section-text--big
+		margin-bottom: 100px
+.featured-item
+	background: $darkBgColor
+	padding: 60px 60px 110px 40px
+	color: $whiteColor
+	height: 370px
+.featured-item__filter
+	display: block 
+	text-transform: uppercase
+	margin-bottom: 35px
+.featured-item__text
+	font-size: 24px
+	line-height: 33px
+	margin-bottom: 50px
+.featured-item__bottom
+	position: absolute
+	bottom: 50px
+	height: 60px
+	padding-left: 80px
+	padding-top: 10px
+	span
+		display: block
+		font-family: "SourceSansProBold"
+.featured-item__name
+	margin-bottom: 10px
+	text-transform: uppercase
+.featured-item__photo
+	position: absolute
+	left: 0
+	top: 0
+@import "media" // Всегда в конце
