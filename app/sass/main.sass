@@ -29,7 +29,7 @@ body textarea:required:valid
 
 html, body
 	height: 100%
-.clearfix:after 
+.clearfix::after 
 	content: ""
 	display: table
 	clear: both
@@ -179,9 +179,14 @@ section
 .section-text--small
 	font-size: 16px
 	line-height: 26px
-.featured
+.featured,
+.clients,
+.portfolio
 	.bx-wrapper
 		box-shadow: none
+		margin: 0 auto
+		background: none
+		border: 0
 		.bx-viewport
 			box-shadow: none
 			left: 0
@@ -208,15 +213,101 @@ section
 	bottom: 50px
 	height: 60px
 	padding-left: 80px
-	padding-top: 10px
 	span
 		display: block
 		font-family: "SourceSansProBold"
 .featured-item__name
-	margin-bottom: 10px
 	text-transform: uppercase
 .featured-item__photo
 	position: absolute
 	left: 0
 	top: 0
+.featured-slider
+	position: relative
+.featured-slider__prev,
+.featured-slider__next
+	position: absolute
+	top: 50%
+	a
+		&.disabled
+			display: none
+.featured-slider__next
+	right: -1%
+	.bx-next
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-right.svg) no-repeat
+		background-size: 100%
+.featured-slider__prev
+	left: -1%
+	.bx-prev
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-left.svg) no-repeat
+		background-size: 100%
+.clients-clider
+	position: relative
+.clients-slider__prev,
+.clients-slider__next
+	position: absolute
+	top: 50%
+	margin-top: -8px
+	a
+		&.disabled
+			display: none
+.clients-slider__next
+	right: -1%
+	.bx-next
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-right.svg) no-repeat
+		background-size: 100%
+.clients-slider__prev
+	left: -2%
+	.bx-prev
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-left.svg) no-repeat
+		background-size: 100%
+.js-clients__slider
+	li
+		padding: 0 10px
+	img
+		display: block
+		margin: 0 auto
+
+//секция картинок
+.js-portfolio-slider
+	li
+		max-height: 350px
+		overflow: hidden
+.portfolio
+	.section-text-big
+		&::after
+			display: block
+			width: 75px
+			content: ""
+			height: 7px
+			margin: 45px auto 55px
+			background: $orangeColor
+	.bx-pager-item
+		a
+			&.active
+				background: $orangeColor !important
+.portfolio-filter
+	margin-bottom: 40px
+	text-align: center
+.portfolio-filter__item
+	display: inline-block
+	vertical-align: top
+	font-size: 16px
+	margin: 0 15px
+	&.portfolio-filter__item--all
+		display: none
+.portfolio-slider
+	display: none
 @import "media" // Всегда в конце
