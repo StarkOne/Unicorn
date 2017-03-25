@@ -34,5 +34,17 @@ $(function() {
 		// ticker: true,
 		// speed: 25000
 	});
+	$(".js-article__slider").bxSlider({
+		hideControlOnEnd: true,
+		minSlides: 1,
+		maxSlides: 3,
+		slideWidth: 380,
+		pager: false,
+		infiniteLoop: false,
+		nextText: "",
+		prevText: "",
+		nextSelector: ".article-slider__next",
+		prevSelector: ".article-slider__prev"
+	});
 	//var mixer = mixitup('.js-portfolio-slider');
 });

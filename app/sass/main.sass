@@ -181,7 +181,8 @@ section
 	line-height: 26px
 .featured,
 .clients,
-.portfolio
+.portfolio,
+.article-slider
 	.bx-wrapper
 		box-shadow: none
 		margin: 0 auto
@@ -287,6 +288,7 @@ section
 		overflow: hidden
 .portfolio
 	.section-text-big
+		text-align: center
 		&::after
 			display: block
 			width: 75px
@@ -301,6 +303,10 @@ section
 .portfolio-filter
 	margin-bottom: 40px
 	text-align: center
+	li
+		cursor: pointer
+		&:hover
+			text-decoration: underline
 .portfolio-filter__item
 	display: inline-block
 	vertical-align: top
@@ -310,4 +316,205 @@ section
 		display: none
 .portfolio-slider
 	display: none
+//quote
+.quote
+	background: $mainColor
+	color: #fff
+	text-align: center
+.quote-text
+	font-size: 20px
+	line-height: 38px
+	width: 100%
+	max-width: 740px
+	margin: 0 auto 35px
+	&::before
+		content: ""
+		width: 16px
+		height: 16px
+		display: block
+		background: url(../img/quote.png) no-repeat
+		margin: 0 auto 25px
+
+.quote-author
+	font-size: 20px
+	line-height: 38px
+	font-style: italic
+	font-family: $Light-font
+//team
+.team
+	text-align: center
+	.section-text-big
+		margin-bottom: 70px
+.team-item
+	display: inline-block
+	vertical-align: top
+	width: 20%
+	padding-top: 170px
+	margin: 0 2%
+	position: relative
+	span
+		display: block
+	&::before
+		content: ""
+		background: url(../img/spritesheet1.png) no-repeat 0 0
+		display: block
+		position: absolute
+		width: 100%
+		height: 120px
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+.team-item--lead
+	&:before
+		background-position: -22px -80px
+.team-item--model
+	&:before
+		background-position: -306px -80px
+.team-item--master
+	&:before
+		background-position: -310px -364px
+.team-item--manages
+	&:before
+		background-position: -605px -80px
+.team-name
+	text-transform: uppercase
+	font-size: 16px
+	font-family: $Bold-font
+	margin-bottom: 20px
+.team-work
+	font-size: 15px
+//facts
+.facts
+	background: url(../img/Layer13.jpg) 0 0 no-repeat
+	position: relative
+	background-size: cover
+	color: #fff
+	&::after
+		content: ""
+		top: 0
+		right: 0
+		position: absolute
+		bottom: 0
+		left: 0
+		background-color: rgba(0,0,0,.5)
+		z-index: 1
+		display: block
+	.wrapper
+		z-index: 2
+.facts-item__wrap
+	width: 100%
+	max-width: 830px
+	margin: 0 auto 
+	position: relative
+	background: rgba(255,255,255,.34)
+	text-align: center
+	padding: 50px
+	&::after
+		content: ""
+		display: block
+		left: 50%
+		transform: translateX(-50%)
+		width: 75px
+		position: absolute
+		bottom: -4px
+		height: 5px
+		background-color: $orangeColor
+.facts-item
+	display: inline-block
+	vertical-align: top
+	width: 40%
+	margin: 0 2% 50px
+	&:hover
+		.facts-number
+			&::after
+				background-color: $orangeColor
+.facts-number
+	font-size: 27px
+	font-family: $Bold-font
+	&::after
+		content: ""
+		transition: all .5s
+		display: block
+		margin: 20px auto 10px
+		width: 75px
+		height: 5px
+		background-color: $darkestGrayColor
+.facts-title
+	font-size: 24px
+//article
+.article-text
+	width: 95%
+	max-width: 420px
+	margin: 0 auto
+	padding-top: 80px
+.article-line
+	overflow: hidden
+	margin-bottom: 50px
+	&:last-child
+		margin-bottom: 0
+.article-item
+	float: left
+	width: 48%
+	text-align: center
+	span
+		display: block
+	&:first-child
+		margin-right: 4%
+.article-info
+	color: $lightGrayColor
+	margin-bottom: 20px
+.article-title
+	font-size: 24px
+	margin-bottom: 45px
+	line-height: 33px
+.articles-img
+	width: 100%
+//slider art
+.article-clider
+	position: relative
+.article-slider__prev,
+.article-slider__next
+	position: absolute
+	top: 50%
+	margin-top: -8px
+	a
+		&.disabled
+			display: none
+.article-slider__next
+	right: -1%
+	.bx-next
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-right.svg) no-repeat
+		background-size: 100%
+.article-slider__prev
+	left: -2%
+	.bx-prev
+		display: block
+		width: 16px
+		height: 16px
+		background: url(../img/arrow-left.svg) no-repeat
+		background-size: 100%
+.js-article__slider
+	li
+		padding: 0 10px
+	img
+		display: block
+		margin: 0 auto
+.article-slider__item
+	border-left: 7px solid black
+	cursor: pointer
+	transition: all .3s
+	padding: 15px 30px
+	&:hover
+		border-left: 7px solid $orangeColor
+	span
+		display: block
+.article-slider__title
+	font-family: $Bold-font
+	font-size: 18px
+	margin-bottom: 10px
+.article-slider__info
+	color: $lightGrayColor
 @import "media" // Всегда в конце
