@@ -47,4 +47,7 @@ $(function() {
 		prevSelector: ".article-slider__prev"
 	});
 	//var mixer = mixitup('.js-portfolio-slider');
+	$(".header-nav__toggle").click(function(){
+		$(".header-nav").toggleClass("active");
+	});
 });

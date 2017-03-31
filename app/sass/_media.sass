@@ -5,23 +5,176 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 	/**/
-
-
+	.featured-slider__prev,
+	.featured-slider__next
+		position: absolute
+		top: auto
+		bottom: -35px
+		a
+			&.disabled
+				display: none
+	.featured-slider__prev
+		left: 40%
+		.bx-prev
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-left.svg) no-repeat
+			background-size: 100%
+	.featured-slider__next
+		right: 40%
+		.bx-next
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-right.svg) no-repeat
+			background-size: 100%
+	.clients-slider__prev,
+	.clients-slider__next
+		position: absolute
+		top: auto
+		bottom: -35px
+		margin-top: -8px
+		a
+			&.disabled
+				display: none
+	.clients-slider__next
+		right: 40%
+		.bx-next
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-right.svg) no-repeat
+			background-size: 100%
+	.clients-slider__prev
+		left: 40%
+		.bx-prev
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-left.svg) no-repeat
+			background-size: 100%
+	.article-slider__prev,
+	.article-slider__next
+		position: absolute
+		top: auto
+		bottom: -35px
+		a
+			&.disabled
+				display: none
+	.article-slider__prev
+		left: 40%
+		.bx-prev
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-left.svg) no-repeat
+			background-size: 100%
+	.article-slider__next
+		right: 40%
+		.bx-next
+			display: block
+			width: 16px
+			height: 16px
+			background: url(../img/arrow-right.svg) no-repeat
+			background-size: 100%
+	.footer-top__right
+		max-width: 450px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
-
+	.footer-top__left
+		float: none
+		max-width: 100%
+		margin-bottom: 50px
+	.article-text
+		padding-top: 30px
+	.footer-top__right
+		float: none
+		max-width: 100%
+		margin-bottom: 50px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
-
-
+	.article-item
+		float: none
+		width: 100%
+		margin: 0
+		&:first-child
+			margin-right: 0
+	.articles-img
+		display: none
+	.team-item
+		width: 40%
+		margin-bottom: 50px
+	.featured
+		.section-text--big
+			margin-bottom: 50px
+	.advantages-item
+		width: 40%
+		margin-bottom: 50px
+	.top-bg
+		.wrapper
+			min-height: 550px
+	.top-banner__info
+		top: 20%
+		text-align: center
+	.top-banner__title
+		font-size: 50px
+		&:after
+			right: 50%
+			margin-right: -70px
+	.header-nav
+		position: absolute
+		top: 10px
+		right: 10px
+	.top-banner__text
+		font-size: 16px
+		line-height: 20px
+	.section-text--big
+		line-height: 20px
+	section
+		padding: 50px 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
-
-
+	.advantages-item
+		width: 90%
+		margin: 0 auto 50px
+		padding-top: 0
+		text-align: center
+	.advantages-img
+		position: static
+		display: inline-block
+	.portfolio-filter__item
+		margin: 0 5px
+	.header
+		text-align: center
+	.header-logo
+		float: none
+	.top-banner__title
+		font-size: 35px
+	.team-item
+		width: 80%
+		padding-top: 130px
+		margin: 0 auto 60px
+	.facts-item__wrap
+		padding: 60px 10px 20px
+	.facts-item
+		width: 80%
+		margin: 0 auto
+	.footer
+		padding-top: 30px
+		text-align: center
+	.footer-disc
+		float: none
+		margin-bottom: 40px
+	.footer-info-menu
+		float: none
+	.footer-info-menu__list
+		li
+			margin-left: 13px
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
